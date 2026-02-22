@@ -10,8 +10,5 @@
     "name": "Auto Solver AI",
     "version": "v1.0.0",
     "developer": "Pálnagy Szilárd",
-    "description": "Advanced algorithmic pathfinder and PID physics solver.",
-    "dependencies": {
-        "geode.node-ids": ">=1.16.0"
-    }
+    "description": "Advanced algorithmic pathfinder and PID physics solver."
 }
