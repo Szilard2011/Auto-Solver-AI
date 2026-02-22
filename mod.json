@@ -1,16 +1,16 @@
 {
-	"geode": "$GEODE_VERSION",
+	"geode": "1.3.0",
 	"gd": {
 		"win": "2.2074",
 		"android": "2.2074",
 		"mac": "2.2074",
 		"ios": "2.2074"
 	},
-	"id": "$MOD_ID",
-	"name": "$MOD_NAME",
-	"version": "$MOD_VERSION",
-	"developer": "$MOD_DEVELOPER",
-	"description": "$MOD_DESCRIPTION",
+	"id": "szilard.auto_solver",
+	"name": "Auto Solver AI",
+	"version": "v1.0.0",
+	"developer": "Pálnagy Szilárd",
+	"description": "Advanced algorithmic pathfinder and PID physics solver.",
 	"dependencies": {
 		"geode.node-ids": ">=v1.20.0"
 	}
