@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - "**"
 
 jobs:
   build:
@@ -12,12 +12,14 @@ jobs:
       fail-fast: false
       matrix:
         config:
-        - name: Android
-          os: ubuntu-latest
-          target: android
         - name: Windows
           os: windows-latest
-          target: win
+        - name: Android64
+          os: ubuntu-latest
+          target: Android64
+        - name: Android32
+          os: ubuntu-latest
+          target: Android32
 
     name: ${{ matrix.config.name }}
     runs-on: ${{ matrix.config.os }}
@@ -25,9 +27,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build Mod
+      - name: Build the mod
         uses: geode-sdk/build-geode-mod@main
         with:
           bindings: geode-sdk/bindings
+          bindings-ref: main
           combine: true
           target: ${{ matrix.config.target }}
